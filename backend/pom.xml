@@ -15,14 +15,12 @@
 
     <build>
         <plugins>
-            <!-- Compile Java code -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
             </plugin>
 
-            <!-- Create executable JAR with dependencies -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -30,7 +28,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>backend.Main</mainClass>
+                            <mainClass>com.cyat.backend.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -50,6 +48,6 @@
     </build>
 
     <dependencies>
-        <!-- You can add any needed dependencies here -->
+        <!-- Add dependencies here if needed -->
     </dependencies>
 </project>
