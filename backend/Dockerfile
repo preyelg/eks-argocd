@@ -1,8 +1,10 @@
 FROM openjdk:17-jdk-alpine
+
 WORKDIR /app
 
-# Update to match shaded JAR name
-COPY target/app.jar app.jar
+# ✅ Use the actual shaded JAR name here:
+COPY target/java-backend-1.0.0-shaded.jar app.jar
 
 EXPOSE 8080
+
 ENTRYPOINT ["java", "-jar", "app.jar"]
