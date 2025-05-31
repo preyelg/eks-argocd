@@ -1,5 +1,5 @@
 FROM openjdk:17-jdk-alpine
 WORKDIR /app
-COPY target/*.jar app.jar
+COPY target/java-backend-1.0.0-jar-with-dependencies.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
