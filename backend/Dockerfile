@@ -4,11 +4,11 @@ FROM openjdk:17-jdk-alpine
 # Set working directory
 WORKDIR /app
 
-# Copy JAR into the image
+# Copy the JAR file
 COPY target/java-backend-1.0.0-jar-with-dependencies.jar app.jar
 
-# Expose port used by the app
+# Expose app port
 EXPOSE 8080
 
-# Define entrypoint for the container
-ENTRYPOINT ["java", "-cp", "app.jar", "com.cyat.backend.Main"]
+# Run the fat jar (manifest points to Main class)
+ENTRYPOINT ["java", "-jar", "app.jar"]
